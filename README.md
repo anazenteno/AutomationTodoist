@@ -6,15 +6,15 @@ Instrucciones para configurar y ejecutar pruebas automatizadas Web con:
 	- Herramienta: Playwright y Allure
 
 ### Requisitos Previos
-	1. Instalar Python puedes descargarlo desde aquí.
+	1. Instalar Python puedes descargarlo desde aquí. https://www.python.org/downloads/
 	2. Instalar pip que es el gestor de paquetes de Python.
-	3. Instalar Node.js que requerido para Playwright. Descárgalo desde aquí.
-	4. Instalar Allure para generar reportes. Instálala siguiendo las instrucciones aquí.
+	3. Instalar Node.js que requerido para Playwright. Descárgalo desde aquí. https://playwright.dev/docs/intro
+	4. Instalar Allure para generar reportes. Instálala siguiendo las instrucciones aquí. https://allurereport.org/docs/
 
 ### Configuración del Entorno
 	1. Clonar el repositorio del proyecto.
 		--------------------------------------------------------------------------------------------
-		- git clone <URL_DEL_REPOSITORIO>
+		- git clone https://github.com/anazenteno/AutomationTodoist.git
 		--------------------------------------------------------------------------------------------
 	2. Crear un Entorno Virtual:
 	   Crea un entorno virtual para evitar conflictos con otras versiones de paquetes.
@@ -26,20 +26,15 @@ Instrucciones para configurar y ejecutar pruebas automatizadas Web con:
 	4. Instalar Playwright:
 	   Instala Playwright y sus dependencias.
 	   ----------------------------------------------------------------------------------------------
-	   - pip install playwright
 	   - playwright install
-	   -----------------------------------------------------------------------------------------------
-	5. Configurar Allure:
-	   Asegúrate de que Allure esté instalado y configurado correctamente en tu sistema.
-	   -----------------------------------------------------------------------------------------------
-	   - npm install -g allure-commandline --save-dev
 	   -----------------------------------------------------------------------------------------------
 
 ### Estructura del Proyecto
 	1. Carpetas y Archivos Principales:
 		- features/: Contiene los archivos .feature con los escenarios de prueba.
 		- steps/: Contiene los archivos Python con los steps definitions.
-		- pages_object/: Contiene los archivos Python que representan las páginas de la aplicación web (patrón Page Object Model).
+		- pages_object/: Contiene los archivos Python que representan las páginas de la aplicación
+		  web (patrón Page Object Model).
 		- configure/: Contiene el archivo para configurar el ambiente. usuario y contrasenia
 		  que se encuentran establecidas dentro de file que como son publicas pueden usarlo.
 		- reports/: Carpeta donde se almacenarán los reportes generados por Allure.
@@ -52,7 +47,7 @@ Instrucciones para configurar y ejecutar pruebas automatizadas Web con:
 	2. Generación de Reportes con Allure: 
 	   - Ejecuta las pruebas y genera reportes Allure.
 	     ------------------------------------------------------------------------------------------------
-	     - behave -f allure_behave.formatter:AllureFormatter -o reports/allure-results --no-capture
+	     - behave -f allure_behave.formatter:AllureFormatter -o reports/allure-results --no-capture
 	     ------------------------------------------------------------------------------------------------
 	   - Crear el informe temporalmente para mostrar el contenido automaticamente en un navegador web
 	     ------------------------------------------------------------------------------------------------
